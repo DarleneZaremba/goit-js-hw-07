@@ -21,16 +21,6 @@ gallery = new SimpleLightbox(".gallery a", {
   scrollZoomFactor: 0.5,
 });
 
-// Lazyloading
 
-const galleryImages = document.querySelectorAll(".gallery__image");
 
-if ("loading" in HTMLImageElement.prototype) {
-  galleryImages.forEach((image) => image.setAttribute("loading", "lazy"));
-} else {
-  galleryImages.forEach((image) => {
-    image.classList.add("lazyload");
-    image.setAttribute("data-sizes", "auto");
-    image.setAttribute("data-srcset");
-  });
-}
+
